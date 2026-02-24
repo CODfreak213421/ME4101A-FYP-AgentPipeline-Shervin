@@ -1,0 +1,48 @@
+{% extends "core/base.html" %}
+
+{% block title %}Data Log - Gearbox Monitor{% endblock %}
+
+{% block content %}
+<main class="container mt-5 p-4">
+    {% for datafile in datafiles %}
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">File Name</th>
+                <th scope="col">Date upload</th>
+                <th scope="col">Time upload</th>
+                <th scope="col">Analysis Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{datafile.filename}}</td>
+                <td>{{datafile.created_at.date}}</td>
+                <td>{{datafile.created_at.time}}</td>
+                {% if datafile.status == 'Processing' %}
+                    <td><span class="badge rounded-pill text-bg-primary">Processing</span></td>
+                {% elif datafile.status == 'Completed' %}
+                    <td><span class="badge rounded-pill text-bg-success">Completed</span></td>
+                {% else %}
+                    <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                {% endif %}
+            </tr>
+            {% if datafile.agent_response %}
+            <tr>
+                <th scope="row">Result</th>
+                <td colspan="4">{{datafile.agent_response.gear_Status}}</td>
+            </tr>
+            <tr>
+                <th scope="row">AI Engineer Suggestion</th>
+                <td colspan="4">{{datafile.agent_response.response_text}}</td>
+            </tr>
+            <tr>
+                <th scope="row">AI Engineer Suggestion</th>
+                <td colspan="4">{{datafile.agent_response.actions_to_take}}</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    {% endfor %}
+</main>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+
+{% block title %}Home - Gearbox Monitor{% endblock %}
+
+{% block content %}
+<main class="container mt-5 p-4">
+    <h1>Gearbox Condition monitoring and Analysis Tool</h1>
+    <p>Vibration data uploaded will be processed and analyzed for its current health condition.</p>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            {{ form.name }}
+            <label for="floatingInput">Test name</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Input Data File</label>
+            {{ form.upload }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+
+</main>
+{% endblock %}
+

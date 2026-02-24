@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+scipy
+tensorflow
+keras
+django
+python-dotenv
+langgraph
+langchain_openai
+langchain_community
+matlabengine==24.2.2
+redis
+celery
