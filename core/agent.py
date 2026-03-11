@@ -34,7 +34,7 @@ def inform_engineer(informMessage: str) -> str:
     return send_mail('Gearbox Condition Alert', 
                      informMessage, 
                      settings.EMAIL_HOST_USER,
-                     ['e1186170@u.nus.edu'],
+                     ['shervindeptest1@gmail.com'],
                      fail_silently=False
                      )
 
@@ -45,7 +45,7 @@ def request_maintenance(requestMessage: str) -> str:
     return send_mail('URGENT! Maintenance Request', 
                      requestMessage, 
                      settings.EMAIL_HOST_USER,
-                     ['e1186170@u.nus.edu'],
+                     ['shervindeptest1@gmail.com'],
                      fail_silently=False
                      )
 
