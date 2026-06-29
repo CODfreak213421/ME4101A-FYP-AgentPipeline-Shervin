@@ -16,7 +16,7 @@ Tools like **Celery** and **Redis** are deployed to perform background tasks. Th
 ## Psychoacoustic Extraction
 Uploaded data file will run through **MATLAB** Engine, via python, which will perform data extraction and saves them into two seperate files for Loudness and Sharpness 
 
-## Validaiton
+## Validation
 Tensorflow and Keras Libraries are used to reactive the saved CNN models for Loudness and Sharpness. Thereafter Prediction takes place for each sample and the overall predicted class will be saved and sent to the AI Agent 
 
 ## AI Agent 
