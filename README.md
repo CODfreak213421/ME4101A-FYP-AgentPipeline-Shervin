@@ -4,6 +4,9 @@ A complete agent pipeline that helps with condition monitoring and helps alert S
 
 ![alt text](<ME41101A Condition Monitoring Agent Pipeline.png>)
 
+## Demo Showcase 
+Link to video: https://www.youtube.com/watch?v=LvSmEkUllNI&list=PLMTJDcrCKCmxR8CcRxUegfGcJR7rZ1OLu&index=6
+
 ## Project Purpose 
 This projects main aim is to create an end to end web application that collects data (simulated) from a vibration accelerometer stored in a CSV file. File is then validated through a two Custom Machine Learning Models using Psychoacoustic Loudness and Psychoacoustic Sharpness Parameters. Once validation is complete, AI Agent will send out email notification to the Head Engineer to inform validation is done. In the scenario that it requires repair due to defects, AI Agent will send a Email alert to the maintenance Engineer for a inspection Request. 
 
